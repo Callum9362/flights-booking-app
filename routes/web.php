@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Route::prefix('airlines')->name('airlines.')->group(function () {
     Route::get('', [AirlineController::class, 'index'])->name('index');
+    Route::post('/store', [AirlineController::class, 'store'])->name('store');
 });

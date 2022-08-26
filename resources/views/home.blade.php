@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
-        <span>Hello</span>
+        <span class="text-blue-500">Hello</span>
     </div>
 @endsection
