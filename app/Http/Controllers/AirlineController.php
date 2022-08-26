@@ -9,7 +9,8 @@ class AirlineController extends Controller
 {
    public function index()
    {
-       return view('airlines.index');
+       return view('airlines.index')
+           ->with('airlines', Airline::all());
    }
 
    public function store(Request $request)
