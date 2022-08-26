@@ -15,7 +15,6 @@ class AirlineController extends Controller
 
    public function store(Request $request)
    {
-       $airline = new Airline;
 
        $request->validate([
            'airline-code' => ['required'],
@@ -23,7 +22,7 @@ class AirlineController extends Controller
            'airline-country' => ['required'],
        ]);
 
-       $airline::create([
+       Airline::create([
            'airline_code' => $request->get('airline-code'),
            'airline_name' => $request->get('airline-name'),
            'airline_country' => $request->get('airline-country'),
@@ -31,5 +30,12 @@ class AirlineController extends Controller
 
        return back();
 
+   }
+
+   public function delete(Airline $id)
+   {
+        $airline = Airline::find($id);
+        $airline->each->delete();
+        return back();
    }
 }

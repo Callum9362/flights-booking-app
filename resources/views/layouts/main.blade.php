@@ -15,4 +15,5 @@
 <x-Header></x-Header>
 @yield('page')
 </body>
+<script src="https://kit.fontawesome.com/c5f41b9352.js" crossorigin="anonymous"></script>
 </html>

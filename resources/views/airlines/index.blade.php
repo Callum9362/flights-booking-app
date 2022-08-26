@@ -68,8 +68,14 @@
                             {{ $airline->airline_country }}
                         </td>
                         <td class="border-b border-slate-100 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                            <i class="fa-solid fa-pen-to-square"></i>
                         </td>
                         <td class="border-b border-slate-100 dark:border-slate-700 text-slate-500 dark:text-slate-400">
+                            <form action="{{ route('airlines.delete', ['id' => $airline->id]) }}" method="POST">
+                                @csrf
+                                <button type="submit"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                            </form>
+
                         </td>
                     </tr>
                 @endforeach
