@@ -10,7 +10,7 @@ class AirportController extends Controller
     public function index()
     {
         return view('airports.index')
-        ->with('airports', Airport::all());
+        ->with('airports', Airport::cursorPaginate(20));
     }
 
     public function store(Request $request)

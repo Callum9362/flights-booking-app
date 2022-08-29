@@ -110,8 +110,8 @@
                     </tbody>
                 </table>
             </div>
+            {!! $airports->links()  !!}
         </div>
-
     </div>
 
 
