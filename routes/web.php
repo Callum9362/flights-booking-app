@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AirlineController;
+use App\Http\Controllers\AirportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,11 @@ Route::prefix('airlines')->name('airlines.')->group(function () {
     Route::get('', [AirlineController::class, 'index'])->name('index');
     Route::post('/store', [AirlineController::class, 'store'])->name('store');
     Route::post('/delete/{id}', [AirlineController::class, 'delete'])->name('delete');
+});
+
+
+Route::prefix('airports')->name('airports.')->group(function () {
+    Route::get('', [AirportController::class, 'index'])->name('index');
+    Route::post('/store', [AirportController::class, 'store'])->name('store');
+    Route::post('/delete/{id}', [AirportController::class, 'delete'])->name('delete');
 });
