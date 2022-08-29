@@ -32,4 +32,11 @@ class AirportController extends Controller
 
         return back();
     }
+
+    public function delete(Airport $id)
+    {
+        $airport = Airport::find($id);
+        $airport->each->delete();
+        return back();
+    }
 }
