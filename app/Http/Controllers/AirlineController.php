@@ -10,7 +10,7 @@ class AirlineController extends Controller
    public function index()
    {
        return view('airlines.index')
-           ->with('airlines', Airline::all());
+           ->with('airlines', Airline::cursorPaginate(20));
    }
 
    public function store(Request $request)

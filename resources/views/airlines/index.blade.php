@@ -75,15 +75,14 @@
                                     @csrf
                                     <button type="submit"><i class="fa-solid fa-rectangle-xmark"></i></button>
                                 </form>
-
                             </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
+            {!! $airlines->links()  !!}
         </div>
-
     </div>
 
 
