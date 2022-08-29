@@ -17,8 +17,8 @@ class AirlineController extends Controller
    {
 
        $request->validate([
-           'airline-code' => ['required'],
-           'airline-name' => ['required'],
+           'airline-code' => ['required', 'unique:airlines'],
+           'airline-name' => ['required', 'unique:airlines'],
            'airline-country' => ['required'],
        ]);
 

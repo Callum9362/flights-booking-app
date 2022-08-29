@@ -16,18 +16,18 @@ class AirportController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'airport-name' => ['required'],
-            'airport-country' => ['required'],
-            'airport-city' => ['required'],
-            'airport-code' => ['required'],
+            'airport_name' => ['required', 'unique:airports'],
+            'country' => ['required'],
+            'city' => ['required'],
+            'code' => ['required', 'unique:airports'],
         ]);
 
         Airport::create([
-            'airport_name' => $request->get('airport-name'),
-            'country' => $request->get('airport-country'),
-            'state' => $request->get('airport-state'),
-            'city' => $request->get('airport-city'),
-            'code' => $request->get('airport-code'),
+            'airport_name' => $request->get('airport_name'),
+            'country' => $request->get('country'),
+            'state' => $request->get('state'),
+            'city' => $request->get('city'),
+            'code' => $request->get('code'),
         ]);
 
         return back();

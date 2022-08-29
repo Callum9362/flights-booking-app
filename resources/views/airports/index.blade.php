@@ -7,51 +7,51 @@
             <form action="{{ route('airports.store') }}" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport-name">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport_name">
                         Name
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport-name') border-1 border-red-600 @enderror" name="airport-name" type="text">
-                    @error('airport-name')
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport_name') border-1 border-red-600 @enderror" name="airport_name" type="text">
+                    @error('airport_name')
                     <span class="text-red-600">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport-name">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="country">
                         Country
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport-country') border-1 border-red-600 @enderror" name="airport-country" type="text">
-                    @error('airport-country')
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('country') border-1 border-red-600 @enderror" name="country" type="text">
+                    @error('country')
                     <span class="text-red-600">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport-state">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="state">
                         State
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport-state') border-1 border-red-600 @enderror" name="airport-state" type="text">
-                    @error('airport-state')
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('state') border-1 border-red-600 @enderror" name="state" type="text">
+                    @error('state')
                     <span class="text-red-600">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport-city">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="city">
                         City
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport-city') border-1 border-red-600 @enderror" name="airport-city" type="text">
-                    @error('airport-city')
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('city') border-1 border-red-600 @enderror" name="city" type="text">
+                    @error('city')
                     <span class="text-red-600">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="airport-city">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="code">
                         Code
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('airport-code') border-1 border-red-600 @enderror" name="airport-code" type="text">
-                    @error('airport-code')
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @error('code') border-1 border-red-600 @enderror" name="code" type="text">
+                    @error('code')
                     <span class="text-red-600">{{ $message }}</span>
                     @enderror
                 </div>
