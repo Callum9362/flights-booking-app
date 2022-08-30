@@ -16,4 +16,9 @@ class Airport extends Model
     ];
 
     use HasFactory;
+
+    public function flights()
+    {
+        return $this->hasMany(Flight::class);
+    }
 }
